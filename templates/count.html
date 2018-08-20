@@ -1,0 +1,16 @@
+<h3><a href="{% url 'home' %}">Home</a></h3>
+<h1>There are {{ count }} words in your text</h1>
+
+<p>Your text is : </p>
+<p>'{{ fulltext }}'</p>
+
+<br>
+
+<h2>Word Count : </h2>
+
+{% for word, counttotal in sortedWords %}
+
+  {{ word }} - {{ counttotal }}
+  <br>
+
+{% endfor %}
